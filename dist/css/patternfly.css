@@ -9551,6 +9551,16 @@ h6 .label {
     padding-left: 0;
   }
 }
+.without-navbar-pf .navbar-brand {
+  padding: 12px 0;
+}
+.without-navbar-pf .navbar-utility > li > a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.without-navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon-user {
+  top: 12px;
+}
 .pager li > a,
 .pager li > span {
   background-color: #eeeeee;
