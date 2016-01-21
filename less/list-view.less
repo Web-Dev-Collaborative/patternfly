@@ -2,7 +2,63 @@
 // List View
 // --------------------------------------------------
 
-.list-view-pf {
+.list-view-pf{
+  background: red;
+}
+.list-view-pf-item{
+  .clearfix();
+  background-color: tan;
+  padding: 0 20px;
+  border-bottom: 1px solid blue;
+}
+
+.list-view-pf-main{
+  table-layout: fixed;
+  background-color: orange;
+  display: table-cell;
+  .pull-left{
+    display: table-cell;
+    vertical-align: middle;
+//    margin-right: 10px;
+  }
+  .list-view-pf-body{
+    background: red;
+    display: table-cell;
+    .list-view-pf-title, .list-view-pf-description, .list-view-pf-aditional-info{
+  //    display: inline-block;
+      float: left;
+    }
+    .list-view-pf-title{
+//      margin-right: 20px;
+    }
+  }
+}
+
+.list-view-pf-selection{
+  padding-right: 20px;
+  background: hotpink;
+//  display: table-cell;
+}
+
+
+.list-view-pf-aditional-info{
+  background: yellow;
+  .list-view-pf-aditional-info-item{
+    display: inline-block;
+  }
+}
+
+.list-view-pf-actions{
+//  width: 15%;
+  margin-left: 20px;
+  background: violet;
+}
+
+
+//OLD STUFF
+
+/*
+.OLDlist-view-pf {
   background: @body-bg;
   height: 100%;
   padding-bottom: 1px;
@@ -341,3 +397,4 @@
     background: rgba(0, 0, 0, 0.05);
   }
 }
+*/
