@@ -1,0 +1,362 @@
+---
+categories: [Widgets]
+layout: page
+title: List View
+resource: true
+url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
+---
+
+<!-- NOTE CHANGE class names in general, they suck now -->
+
+
+<div class="list-view-pf">
+
+  <div class="list-view-pf-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div><!-- /list-view-pf-checkbox -->
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown btn-group">
+        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="fa fa-ellipsis-v"></span></button>
+         <ul class="dropdown-menu pull-right">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- summary -->
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+
+  <div class="list-view-pf-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div><!-- /list-view-pf-checkbox -->
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+              Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- summary -->
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+
+
+  <div class="list-view-pf-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div><!-- /list-view-pf-checkbox -->
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One very long name is here
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+            Lorem ipsulpa qui officia deserunt ulpa qui.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- summary -->
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong>
+            Clusters
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+  <div class="list-view-pf-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-ok list-view-pf-icon-md"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- summary -->
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+  <div class="list-view-pf-item list-view-pf-one">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div><!-- /list-view-pf-checkbox -->
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- /list-view-pf-summary -->
+
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <img src="http://placehold.it/60x60">
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-aditional-info-item list-view-pf-aditional-info-item-column">
+            <strong>35%</strong> Service Two
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+
+  <div class="list-view-pf-item list-view-pf-one">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox">
+    </div><!-- /list-view-pf-checkbox -->
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- /list-view-pf-summary -->
+
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item list-view-pf-aditional-info-item-column">
+            <strong>113,735</strong> Service One
+          </div>
+          <div class="list-view-pf-aditional-info-item list-view-pf-aditional-info-item-column">
+            <strong>35%</strong> Service Two
+          </div>
+          <div class="list-view-pf-aditional-info-item list-view-pf-aditional-info-item-column">
+            <strong>22.0%</strong> Service Three
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+  <div class="list-view-pf-item list-view-pf-one">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <div class="list-view-pf-calendar">
+          March
+          <strong>29</strong>
+        </div>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- /list-view-pf-summary -->
+
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong>
+            Nodes
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+  <div class="list-view-pf-item list-view-pf-one">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+    </div><!-- list-view-pf-actions -->
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-lg"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-summary">
+          <div class="list-view-pf-title">
+            Event One
+            <small>Feb 23, 2015 12:32 am</small>
+          </div><!-- /list-view-pf-title -->
+          <div class="list-view-pf-description">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div><!-- /list-view-pf-description -->
+        </div><!-- /list-view-pf-summary -->
+        <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <img src="http://placehold.it/60x60">
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <img src="http://placehold.it/60x60">
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <img src="http://placehold.it/60x60">
+          </div>
+          <div class="list-view-pf-aditional-info-item">
+            <img src="http://placehold.it/60x60">
+          </div>
+        </div><!-- /list-view-pf-aditional-info -->
+      </div><!--/ list-view-pf-body-->
+    </div><!-- /list-view-pf-main -->
+  </div><!-- /list-view-pf-item -->
+
+
+
+
+
+</div><!-- list-view-pf -->
