@@ -5,7 +5,8 @@
 div{
 //  background-color: rgba(0,0,0,.1)
 }
-/*
+
+/* UNCOMMENT THIS TO HAVE A IE9 PREVIEW
 .list-view-pf-item, .list-view-pf-summary, .list-view-pf-aditional-info{
   display: block!important;
 }
@@ -25,8 +26,6 @@ div{
 
 .list-view-pf{
   margin-bottom: 20px; //do we usually do this to separet components?
-
-
   .dropdown {
     margin: -11px 0px -12px 12px;
     .btn-link {
@@ -65,14 +64,20 @@ div{
       }
     }
   }
-
 }
 
 .list-view-pf-item{
+  &:hover{
+   background-color: #ededed;
+   cursor: pointer;
+  }
+  &.active{
+    background: #def3ff;
+  }
   .clearfix(); //IE9 fallback
   display: flex;
   align-items: flex-start;
-  padding: 20px 0 20px 15px;
+  padding: 20px 15px;
   border-bottom: 1px solid #ececec;
   @media (min-width: @screen-md-min) {
     align-items: center;
@@ -84,6 +89,9 @@ div{
   padding: 3px 10px 3px 0;
   margin-right: 15px;
   border-right: 1px solid #d1d1d1;
+  .list-view-pf-top &{
+    align-self: flex-start;
+  }
 }
 
 .list-view-pf-main-info{
@@ -92,6 +100,9 @@ div{
   flex: 1;
   @media (min-width: @screen-md-min) {
     align-items: center;
+    .list-view-pf-top &{
+      align-items: flex-start;
+    }
   }
 }
 
@@ -154,7 +165,7 @@ div{
 
 .list-view-pf-summary{
   flex: 1 0 55%;
-  .list-view-pf-one &{
+  .list-view-pf-two-line &{
     display: block;
   }
   @media (min-width: @screen-md-min) {
@@ -162,23 +173,23 @@ div{
     align-items: center;
     float: left; //IE9 fallback
     width: 55%; //IE9 fallback
-    .list-view-pf-one &{
-      width: 50%; //IE9 fallback
-      flex: 1 0 50%;
-    }
+//    .list-view-pf-two-line &{
+//      width: 50%; //IE9 fallback
+//      flex: 1 0 50%;
+//    }
   }
 }
 
-
 .list-view-pf-title{
   font-weight: 600;
-  margin-bottom: 5px;
+  font-size: @font-size-h3;
   small{
     display: block;
     margin-top: 5px;
     font-size: (@font-size-base * 0.8);
   }
   @media (min-width: @screen-md-min) {
+    font-size: @font-size-base;
     flex: 1 0 calc(~'25% - 20px');
     margin: 0 20px 0 0;
     width: calc(~'25% - 20px');  // IE9 fallback
@@ -187,7 +198,7 @@ div{
     overflow: hidden;
     text-overflow: ellipsis;
     overflow: hidden;
-    .list-view-pf-one &{
+    .list-view-pf-two-line &{
       width: auto;// IE9 fallback
       float: none;// IE9 fallback
       margin-right: 40px;
@@ -205,7 +216,7 @@ div{
     margin: 0 40px 0 0;
     width: calc(~'75% - 40px'); // IE9 fallback
     float: left; // IE9 fallback
-    .list-view-pf-one &{
+    .list-view-pf-two-line &{
       width: auto;
       float: none;
     }
@@ -220,11 +231,12 @@ div{
     flex: 1 0 auto; // it covers whats left from summary
     width: 45%; // IE9 fallback
     float: left; // IE9 fallback
-    .list-view-pf-one &{
-      width: 50%;// IE9 fallback
+    .list-view-pf-two-line &{
+//      width: 50%;// IE9 fallback
     }
   }
 }
+
 
 .list-view-pf-aditional-info-item{
   align-items: center;

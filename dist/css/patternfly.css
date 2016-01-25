@@ -9068,7 +9068,7 @@ h6 .label {
 .list-group-item-heading {
   font-weight: 700;
 }
-/*
+/* UNCOMMENT THIS TO HAVE A IE9 PREVIEW
 .list-view-pf-item, .list-view-pf-summary, .list-view-pf-aditional-info{
   display: block!important;
 }
@@ -9129,8 +9129,15 @@ h6 .label {
 .list-view-pf-item {
   display: flex;
   align-items: flex-start;
-  padding: 20px 0 20px 15px;
+  padding: 20px 15px;
   border-bottom: 1px solid #ececec;
+}
+.list-view-pf-item:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+.list-view-pf-item.active {
+  background: #def3ff;
 }
 .list-view-pf-item:before,
 .list-view-pf-item:after {
@@ -9159,6 +9166,9 @@ h6 .label {
   margin-right: 15px;
   border-right: 1px solid #d1d1d1;
 }
+.list-view-pf-top .list-view-pf-checkbox {
+  align-self: flex-start;
+}
 .list-view-pf-main-info {
   display: flex;
   align-items: flex-start;
@@ -9167,6 +9177,9 @@ h6 .label {
 @media (min-width: 992px) {
   .list-view-pf-main-info {
     align-items: center;
+  }
+  .list-view-pf-top .list-view-pf-main-info {
+    align-items: flex-start;
   }
 }
 .list-view-pf-left {
@@ -9232,7 +9245,7 @@ h6 .label {
 .list-view-pf-summary {
   flex: 1 0 55%;
 }
-.list-view-pf-one .list-view-pf-summary {
+.list-view-pf-two-line .list-view-pf-summary {
   display: block;
 }
 @media (min-width: 992px) {
@@ -9242,14 +9255,10 @@ h6 .label {
     float: left;
     width: 55%;
   }
-  .list-view-pf-one .list-view-pf-summary {
-    width: 50%;
-    flex: 1 0 50%;
-  }
 }
 .list-view-pf-title {
   font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 16px;
 }
 .list-view-pf-title small {
   display: block;
@@ -9258,6 +9267,7 @@ h6 .label {
 }
 @media (min-width: 992px) {
   .list-view-pf-title {
+    font-size: 12px;
     flex: 1 0 calc(25% - 20px);
     margin: 0 20px 0 0;
     width: calc(25% - 20px);
@@ -9266,7 +9276,7 @@ h6 .label {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .list-view-pf-one .list-view-pf-title {
+  .list-view-pf-two-line .list-view-pf-title {
     width: auto;
     float: none;
     margin-right: 40px;
@@ -9285,7 +9295,7 @@ h6 .label {
     width: calc(75% - 40px);
     float: left;
   }
-  .list-view-pf-one .list-view-pf-description {
+  .list-view-pf-two-line .list-view-pf-description {
     width: auto;
     float: none;
   }
@@ -9300,9 +9310,6 @@ h6 .label {
     flex: 1 0 auto;
     width: 45%;
     float: left;
-  }
-  .list-view-pf-one .list-view-pf-aditional-info {
-    width: 50%;
   }
 }
 .list-view-pf-aditional-info-item {

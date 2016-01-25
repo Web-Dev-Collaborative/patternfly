@@ -27,7 +27,6 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
             <li><a href="#">Separated link</a></li>
         </ul>
       </div>
-
     </div><!-- list-view-pf-actions -->
     <div class="list-view-pf-main-info">
       <div class="list-view-pf-left">
@@ -196,7 +195,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
     </div><!-- /list-view-pf-main -->
   </div><!-- /list-view-pf-item -->
 
-  <div class="list-view-pf-item list-view-pf-one">
+  <div class="list-view-pf-item list-view-pf-two-line list-view-pf-top">
     <div class="list-view-pf-checkbox">
       <input type="checkbox">
     </div><!-- /list-view-pf-checkbox -->
@@ -239,7 +238,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
 
 
 
-  <div class="list-view-pf-item list-view-pf-one">
+  <div class="list-view-pf-item list-view-pf-two-line list-view-pf-top">
     <div class="list-view-pf-checkbox">
       <input type="checkbox">
     </div><!-- /list-view-pf-checkbox -->
@@ -251,7 +250,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
       <div class="list-view-pf-body">
         <div class="list-view-pf-summary">
           <div class="list-view-pf-title">
-            Event One
+            Event Ones
           </div><!-- /list-view-pf-title -->
           <div class="list-view-pf-description">
             The following snippet of text is <a href="#">rendered as link text</a>.
@@ -275,7 +274,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
 
 
 
-  <div class="list-view-pf-item list-view-pf-one">
+  <div class="list-view-pf-item list-view-pf-two-line">
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
       <button class="btn btn-default">Action</button>
@@ -296,8 +295,11 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
             The following snippet of text is <a href="#">rendered as link text</a>.
           </div><!-- /list-view-pf-description -->
         </div><!-- /list-view-pf-summary -->
-
         <div class="list-view-pf-aditional-info">
+          <div class="list-view-pf-aditional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Clusters
+          </div>
           <div class="list-view-pf-aditional-info-item">
             <span class="pficon pficon-screen"></span>
             <strong>8</strong> Hosts
@@ -318,7 +320,7 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
 
 
 
-  <div class="list-view-pf-item list-view-pf-one">
+  <div class="list-view-pf-item list-view-pf-two-line">
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
       <button class="btn btn-default">Action</button>
@@ -340,15 +342,19 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
         <div class="list-view-pf-aditional-info">
           <div class="list-view-pf-aditional-info-item">
             <img src="http://placehold.it/60x60">
+            <!-- <span id="chart1"></span> -->
           </div>
           <div class="list-view-pf-aditional-info-item">
             <img src="http://placehold.it/60x60">
+            <!-- <span id="chart2"></span> -->
           </div>
           <div class="list-view-pf-aditional-info-item">
             <img src="http://placehold.it/60x60">
+            <!-- <span id="chart3"></span> -->
           </div>
           <div class="list-view-pf-aditional-info-item">
             <img src="http://placehold.it/60x60">
+            <!-- <span id="chart4"></span> -->
           </div>
         </div><!-- /list-view-pf-aditional-info -->
       </div><!--/ list-view-pf-body-->
@@ -357,6 +363,111 @@ url-js-extra: ['!URL_COMPONENTS!c3/c3.min.js', '!URL_COMPONENTS!d3/d3.min.js']
 
 
 
-
-
 </div><!-- list-view-pf -->
+
+
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-view-pf-item').addClass("active");
+      } else {
+        $(this).closest('.list-view-pf-item').removeClass("active");
+      }
+    });
+  });
+
+  // Donut Charts
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart1';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 34],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  var donutChartTitle = d3.select("#chart1").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart2';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 21],
+      ["Available", 79]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart2").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart3';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 14],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart3").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#chart4';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 25],
+      ["Available", 75]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#chart4").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
+
+  // Sparkline Chart
+  var sparklineChartConfig = c3ChartDefaults.getDefaultSparklineConfig();
+  sparklineChartConfig.bindto = '#chart5';
+  sparklineChartConfig.data = {
+    columns: [
+      ['%', 10, 14, 12, 20, 31, 27, 44, 36, 52, 55, 62, 68, 69, 88, 74, 88, 91],
+    ],
+    type: 'area'
+  };
+  c3.generate(sparklineChartConfig);
+</script>
