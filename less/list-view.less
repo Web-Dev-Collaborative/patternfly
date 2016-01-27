@@ -7,7 +7,7 @@ div{
 }
 
 /* UNCOMMENT THIS TO HAVE A IE9 PREVIEW
-.list-view-pf-item, .list-view-pf-summary, .list-view-pf-aditional-info{
+.list-group-item, .list-view-pf-summary, .list-view-pf-aditional-info{
   display: block!important;
 }
 .list-view-pf-main-info{
@@ -24,8 +24,10 @@ div{
 }
 */
 
+
 .list-view-pf{
-  margin-bottom: 20px; //do we usually do this to separet components?
+
+  /*
   .dropdown {
     margin: -11px 0px -12px 12px;
     .btn-link {
@@ -64,43 +66,93 @@ div{
       }
     }
   }
+*/
+  .list-group-item{
+    &:hover{
+      background-color: #ededed;
+    }
+    &.active{
+      background-color: #def3ff;
+      color: @list-group-link-color;
+    }
+    .clearfix(); //IE9 fallback
+    display: -ms-flexbox;// IE10 fallback
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: @screen-md-min) {
+      align-items: center;
+    }
+  }
+  .list-group-item-heading{
+    font-size: @font-size-h3;
+    small{
+      display: block;
+//      margin-top: 5px;
+      font-size: (@font-size-base * 0.8);
+      font-weight: 400;
+    }
+    @media (min-width: @screen-md-min) {
+      font-size: @font-size-base;
+      -ms-flex: 1 0 calc(~'25% - 20px');// IE10 fallback
+      flex: 1 0 calc(~'25% - 20px');
+      margin: 0 20px 0 0;
+      width: calc(~'25% - 20px');  // IE9 fallback
+      float: left; // IE9 fallback
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .list-group-item-text{
+    margin-bottom: 10px;
+    color: currentColor !important;// to overwrite color change when active.
+    @media (min-width: @screen-md-min) {
+      -ms-flex: 1 0 auto; // IE10 prefix
+      flex: 1 0 auto; // it covers whats left from the title
+      margin: 0 40px 0 0;
+      width: calc(~'75% - 40px'); // IE9 fallback
+      float: left; // IE9 fallback
+    }
+  }
 }
 
-.list-view-pf-item{
-  &:hover{
-   background-color: #ededed;
-   cursor: pointer;
+.list-view-pf-stacked {
+  .list-group-item-heading{
+    width: auto;// IE9 fallback
+    float: none;// IE9 fallback
+    margin-right: 40px;
+    font-size: @font-size-h3;
+    line-height: 1.2em;
+    margin-bottom: 5px;
   }
-  &.active{
-    background: #def3ff;
-  }
-  .clearfix(); //IE9 fallback
-  display: flex;
-  align-items: flex-start;
-  padding: 20px 15px;
-  border-bottom: 1px solid #ececec;
-  @media (min-width: @screen-md-min) {
-    align-items: center;
+  .list-group-item-text {
+    width: auto;
+    float: none;
   }
 }
+
 
 .list-view-pf-checkbox{
   float: left; //IE9 fallback
   padding: 3px 10px 3px 0;
   margin-right: 15px;
   border-right: 1px solid #d1d1d1;
-  .list-view-pf-top &{
+  .list-view-pf-top-align &{
     align-self: flex-start;
   }
 }
 
 .list-view-pf-main-info{
+  display: -ms-flexbox;// IE10 fallback
   display: flex;
   align-items: flex-start;
+  -ms-flex: 1; // IE10 prefix
   flex: 1;
   @media (min-width: @screen-md-min) {
     align-items: center;
-    .list-view-pf-top &{
+    .list-view-pf-top-align &{
       align-items: flex-start;
     }
   }
@@ -111,6 +163,7 @@ div{
   vertical-align: top; //IE9 fallback
   padding-right: 20px;
   text-align: center;
+
   .pficon, .fa{
     border-radius: 50%;
     font-size: 2em;
@@ -125,14 +178,28 @@ div{
       height: 60px;
       width: 60px;
       line-height: 60px;
-      background-color: #ededed;
+      background-color: @alert-info-bg;
     }
     &.list-view-pf-icon-md {
       height: 50px;
       width: 50px;
       line-height: 50px;
+      background-color: @alert-info-bg;
+    }
+    &.list-view-pf-icon-success{
       background-color: @alert-success-bg;
       color: @alert-success-border;
+    }
+    &.list-view-pf-icon-info{
+      color: @alert-info-border;
+    }
+    &.list-view-pf-icon-warning{
+      background-color: @alert-warning-bg;
+      color: @alert-warning-border;
+    }
+    &.list-view-pf-icon-danger{
+      background-color: @alert-danger-bg;
+      color: @alert-danger-border;
     }
   }
   .list-view-pf-calendar{
@@ -151,11 +218,14 @@ div{
   display: table-cell; //IE9 fallback
   vertical-align: top; //IE9 fallback
   align-items: center;
+  -ms-flex: 1; // IE10 prefix
   flex: 1;
-  @supports not (display: flex){
-    width: 10000px; // IE9 fallback, it extends the cell to size of the container
-  }
+//  width: 10000px; // IE9 fallback, it extends the cell to size of the container
+//  @supports (display: flex){
+//    width: auto; // ignores IE9 fallback on FireFox
+//  }
   @media (min-width: @screen-md-min) {
+    display: -ms-flexbox;// IE10 fallback
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -163,65 +233,22 @@ div{
 }
 
 
-.list-view-pf-summary{
+.list-view-pf-description{
+  -ms-flex: 1 0 55%; // IE10 prefix
   flex: 1 0 55%;
-  .list-view-pf-two-line &{
+  .list-view-pf-stacked &{
     display: block;
   }
   @media (min-width: @screen-md-min) {
+//    display: -ms-flexbox;// IE10 fallback
     display: flex;
     align-items: center;
     float: left; //IE9 fallback
     width: 55%; //IE9 fallback
-//    .list-view-pf-two-line &{
-//      width: 50%; //IE9 fallback
-//      flex: 1 0 50%;
-//    }
   }
 }
 
-.list-view-pf-title{
-  font-weight: 600;
-  font-size: @font-size-h3;
-  small{
-    display: block;
-    margin-top: 5px;
-    font-size: (@font-size-base * 0.8);
-  }
-  @media (min-width: @screen-md-min) {
-    font-size: @font-size-base;
-    flex: 1 0 calc(~'25% - 20px');
-    margin: 0 20px 0 0;
-    width: calc(~'25% - 20px');  // IE9 fallback
-    float: left; // IE9 fallback
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    .list-view-pf-two-line &{
-      width: auto;// IE9 fallback
-      float: none;// IE9 fallback
-      margin-right: 40px;
-      font-size: @font-size-h3;
-      line-height: 1.1em;
-      margin-bottom: 5px
-    }
-  }
-}
 
-.list-view-pf-description{
-  margin-bottom: 10px;
-  @media (min-width: @screen-md-min) {
-    flex: 1 0 auto; // it covers whats left from the title
-    margin: 0 40px 0 0;
-    width: calc(~'75% - 40px'); // IE9 fallback
-    float: left; // IE9 fallback
-    .list-view-pf-two-line &{
-      width: auto;
-      float: none;
-    }
-  }
-}
 
 .list-view-pf-aditional-info{
   display: flex;
@@ -231,20 +258,16 @@ div{
     flex: 1 0 auto; // it covers whats left from summary
     width: 45%; // IE9 fallback
     float: left; // IE9 fallback
-    .list-view-pf-two-line &{
-//      width: 50%;// IE9 fallback
-    }
   }
 }
 
-
 .list-view-pf-aditional-info-item{
   align-items: center;
+  max-width:100%;
   display: inline-block;
   display: flex;
   margin-right: 20px;
   text-align: center;
-//see if I need this for IE vertical-align: middle;
   strong{
     font-size: @font-size-h3;
     font-weight: 600;
@@ -254,7 +277,7 @@ div{
     font-size: @font-size-h3;
     margin-right: 10px;
   }
-  &.list-view-pf-aditional-info-item-column{
+  &.list-view-pf-aditional-info-item-stacked{
     flex-direction: column;
     text-align: center;
     strong{
@@ -269,6 +292,7 @@ div{
 
 .list-view-pf-actions{
   order: 2;
+  -ms-flex-order: 2;
   float: right; // IE9 fallback
 //see later  margin-top: 2px;
   margin-left: 20px;
