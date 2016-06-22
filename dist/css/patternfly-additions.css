@@ -3584,7 +3584,8 @@ a.disabled {
   float: none;
   width: auto;
 }
-.porcelli-expansion {
+.porcelli-expansion,
+.uf-list-item-expansion {
   background: #fff;
   border-top: 2px solid #ededed;
   border-left: 1px solid #ededed;
@@ -3596,7 +3597,8 @@ a.disabled {
   position: relative;
   order: 222;
 }
-.porcelli-expansion .close {
+.porcelli-expansion .close,
+.uf-list-item-expansion .close {
   position: absolute;
   top: 16px;
   right: 16px;
