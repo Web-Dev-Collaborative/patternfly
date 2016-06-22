@@ -3587,12 +3587,18 @@ a.disabled {
 .porcelli-expansion {
   background: #fff;
   border-top: 2px solid #ededed;
-  border-left: 2px solid #ededed;
-  border-right: 2px solid #ededed;
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
   flex: 0 0 calc(100% + 30px);
   margin-left: -15px;
   text-align: center;
   padding: 40px 0;
+  position: relative;
+}
+.porcelli-expansion .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 .login-pf {
   height: 100%;
