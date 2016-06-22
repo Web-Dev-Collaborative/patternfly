@@ -1,0 +1,50 @@
+//
+// About Modal
+// --------------------------------------------------
+
+.about-modal-pf {
+  background-color: @color-pf-black-900;
+  background-image: url(../img/about-modal-bg.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 216px auto;
+  @media (min-width: @screen-sm-min) {
+    background-size: auto;
+  }
+  .modal-body {
+    color: @color-pf-white;
+    padding-bottom: 16px;
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    @media (min-width: @screen-sm-min) {
+      padding-left: (@grid-gutter-width * 2);
+      padding-right: (@grid-gutter-width * 2);
+    }
+  }
+  .modal-header {
+    background-color: transparent;
+  }
+  .pficon-close {
+    color: @color-pf-white;
+  }
+}
+
+.product-versions-pf {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  .dl-horizontal {
+    dd {
+      margin-left: 0;
+    }
+    dt {
+      float: left;
+      margin-right: (@grid-gutter-width / 4);
+      margin-top: 1px; // To fix the 1px vertical desalignment between dt and dd.
+      width: auto;
+    }
+  }
+}
+
+.trademark-pf {
+  font-size: ceil((@font-size-base - 1));
+}
