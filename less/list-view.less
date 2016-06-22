@@ -5,6 +5,7 @@
 
 .list-view-pf {
   .list-group-item {
+    flex-wrap: wrap;
     align-items: flex-start;
     .clearfix(); //IE9 fallback
     display: -ms-flexbox;// IE10 fallback
@@ -227,4 +228,16 @@
     float: none;
     width: auto;
   }
+}
+
+
+.porcelli-expansion{
+  background: #fff;
+  border-top: 2px solid @color-pf-black-200;
+  border-left: 1px solid @color-pf-black-200;
+  border-right: 1px solid @color-pf-black-200;
+  flex: 0 0 calc(100% + 30px);
+  margin-left: -15px;
+  text-align: center;
+  padding: @grid-gutter-width 0 ;
 }

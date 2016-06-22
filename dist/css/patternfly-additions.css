@@ -3331,6 +3331,7 @@ a.disabled {
   text-decoration: none;
 }
 .list-view-pf .list-group-item {
+  flex-wrap: wrap;
   align-items: flex-start;
   display: -ms-flexbox;
   display: flex;
@@ -3582,6 +3583,16 @@ a.disabled {
 .list-view-pf-stacked .list-group-item-text {
   float: none;
   width: auto;
+}
+.porcelli-expansion {
+  background: #fff;
+  border-top: 2px solid #ededed;
+  border-left: 2px solid #ededed;
+  border-right: 2px solid #ededed;
+  flex: 0 0 calc(100% + 30px);
+  margin-left: -15px;
+  text-align: center;
+  padding: 40px 0;
 }
 .login-pf {
   height: 100%;
