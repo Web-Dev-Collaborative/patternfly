@@ -17,7 +17,7 @@ This is an image:
 
 ![Image description](http://placehold.it/350x150)
 
-## PR checklist (optional if relevant to the PR)
+## PR checklist (if relevant)
 
 - [ ] **Cross browser**: works in IE9
 - [ ] **Cross browser**: works in IE10
@@ -29,4 +29,4 @@ This is an image:
 - [ ] **Cross browser**: works in Opera
 - [ ] **Responsive**: works in extra small, small, medium and large view ports.
 - [ ] **Code guidelines**: Follows [PatternFly Code Guide](http://codeguide.patternfly.org/)
-- [ ] **Preview the PR**: An imagine or an URL for designer to preview this PR is provided
+- [ ] **Preview the PR**: An image or an URL for designer to preview this PR is provided
