@@ -1,7 +1,7 @@
 ## Description
 Write a few sentences describing the overall goals of the pull request's commits.
 
-(optional) Include related PRs or Issues
+(optional) Include related PRs, Issues and or Jira stories.
 
 (optional) Include a list of changes:
 
