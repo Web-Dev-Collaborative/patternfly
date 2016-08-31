@@ -29,4 +29,4 @@ This is an image:
 - [ ] **Cross browser**: works in Opera
 - [ ] **Responsive**: works in extra small, small, medium and large view ports.
 - [ ] **Code guidelines**: Follows [PatternFly Code Guide](http://codeguide.patternfly.org/)
-- [ ] **Preview the PR**: An image or an URL for designer to preview this PR is provided
+- [ ] **Preview the PR**: An image or a URL for designer to preview this PR is provided.
