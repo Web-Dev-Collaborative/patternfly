@@ -3,7 +3,7 @@ Write a few sentences describing the overall goals of the pull request's commits
 
 (optional) Include related PRs, Issues and or Jira stories.
 
-# Changes
+## Changes
 
 Write a list of changes the PR introduces
 
