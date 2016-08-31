@@ -16,3 +16,17 @@ For example: Here is a [link to Alerts on rawgit](https://rawgit.com/patternfly/
 This is an image:
 
 ![Image description](http://placehold.it/350x150)
+
+## PR checklist (optional if relevant to the PR)
+
+- [ ] **Cross browser**: works in IE9
+- [ ] **Cross browser**: works in IE10
+- [ ] **Cross browser**: works in IE11
+- [ ] **Cross browser**: works in Edge
+- [ ] **Cross browser**: works in Chrome
+- [ ] **Cross browser**: works in Firefox
+- [ ] **Cross browser**: works in Safari
+- [ ] **Cross browser**: works in Opera
+- [ ] **Responsive**: works in extra small, small, medium and large view ports.
+- [ ] **Code guidelines**: Follows [PatternFly Code Guide](http://codeguide.patternfly.org/)
+- [ ] **Preview the PR**: An imagine or an URL for designer to preview this PR is provided
