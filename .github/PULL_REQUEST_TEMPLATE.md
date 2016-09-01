@@ -7,7 +7,7 @@ Write a few sentences describing the overall goals of the pull request's commits
 
 Write a list of changes the PR introduces
 
-* Change 01
+* Change 0
 * Change 02
 * Change 03
 
