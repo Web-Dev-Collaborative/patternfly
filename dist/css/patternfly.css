@@ -10086,3 +10086,6 @@ h2,
     margin-right: 20px;
   }
 }
+body {
+  font-weight: 200;
+}
