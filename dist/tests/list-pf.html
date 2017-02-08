@@ -61,7 +61,7 @@
 
   <div class="list-pf-item">
     <div class="list-pf-container">
-      FIRST LINE
+      <button data-toggle="collapse">Collapse</button> FIRST LINE
     </div> <!-- /list-pf-container -->
     <div class="list-pf-expansion collapse">
       <div class="list-pf-container">
@@ -124,6 +124,11 @@
   </div>
 
 </div> <!-- /list-pf -->
+<script>
+  $(document).ready(function() {
+    $('.list-pf').pfList();
+  });
+</script>
 
     </div><!-- /container -->
   </body>
