@@ -3439,11 +3439,11 @@ a.disabled {
   display: flex;
   padding: 20px;
 }
-.list-pf-container:hover {
-  background-color: #fafafa;
-}
 .list-pf-expansion .list-pf-container {
   border-top: 1px solid #bbb;
+}
+.list-pf-hover .list-pf-container:not(:last-child):hover {
+  background-color: #fafafa;
 }
 .list-pf-chevron {
   padding-right: 5px;
