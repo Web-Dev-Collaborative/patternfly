@@ -3438,6 +3438,8 @@ a.disabled {
   background-color: #fff;
 }
 .list-pf-container {
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
@@ -3446,13 +3448,11 @@ a.disabled {
   border-top: 1px solid #bbb;
 }
 .list-pf-chevron {
-  -ms-flex-align: center;
-      align-items: center;
-  border-right: 1px solid #bbb;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 15px;
-  padding-right: 5px;
+  margin-right: 5px;
+}
+.list-pf-chevron + .list-pf-content {
+  border-left: 1px solid #bbb;
+  padding-left: 15px;
 }
 .list-pf-chevron .fa {
   font-size: 22px;
