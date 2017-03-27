@@ -1876,6 +1876,12 @@ select.selectpicker {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.text-overflow-pf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
 .about-modal-pf {
   background-color: #292e34;
   background-image: url("../img/bg-modal-about-pf.png");
@@ -3492,7 +3498,7 @@ a.disabled {
 }
 .list-pf-chevron + .list-pf-content,
 .list-pf-select + .list-pf-content {
-  border-left: 1px solid #bbb;
+  border-left: 1px solid #d1d1d1;
   padding-left: 20px;
 }
 .list-pf-chevron .fa,
@@ -3543,6 +3549,8 @@ a.disabled {
   width: 30px;
 }
 .list-pf-content-wrapper {
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-positive: 1;
@@ -3605,12 +3613,6 @@ a.disabled {
       flex-basis: 100%;
   min-width: 0;
   word-wrap: break-word;
-}
-.list-pf-ellipse-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
 }
 .list-pf-additional-content {
   display: -ms-flexbox;
